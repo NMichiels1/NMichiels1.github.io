@@ -136,9 +136,9 @@ function init() {
     // Create a ArMarkerControls
 
     // Set resource path
-    let nftName = "flyer";
-    let nftUrl  = "../resources/nft/" + nftName; // for local test
-    //let nftUrl  = "https://followthedarkside.github.io/arjs-image-tracking-sample/resources/nft/" + nftName;
+    let nftName = "test";
+    //let nftUrl  = "../resources/nft/" + nftName; // for local test
+    let nftUrl  = "https://nickmichiels.com/AR/resources/nft/" + nftName;
     //let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/FollowTheDarkside/arjs-image-tracking-sample/resources/nft/" + nftName;
     //let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://rawcdn.githack.com/FollowTheDarkside/arjs-image-tracking-sample/tree/master/resources/nft/" + nftName;
 
@@ -159,12 +159,12 @@ function init() {
     scene.visible = false
 
     // Init display object
-    let texture = new THREE.TextureLoader().load('../resources/Map-COL.jpg');
+    let texture = new THREE.TextureLoader().load('https://nickmichiels.com/AR/resources/Map-COL.jpg');
     let model = null;
     const loader = new THREE.GLTFLoader();
     loader.load(
         // resource URL
-        "../resources/LeePerrySmith.glb",
+        "https://nickmichiels.com/AR/resources/LeePerrySmith.glb",
         // called when the resource is loaded
         function ( gltf ){
             model = gltf.scene;
