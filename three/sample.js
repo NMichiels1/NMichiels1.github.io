@@ -136,7 +136,7 @@ function init() {
     // Create a ArMarkerControls
 
     // Set resource path
-    let nftName = "test";
+    let nftName = "flyer";
     //let nftUrl  = "../resources/nft/" + nftName; // for local test
     let nftUrl  = "https://nickmichiels.com/AR/resources/nft/" + nftName;
     //let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/FollowTheDarkside/arjs-image-tracking-sample/resources/nft/" + nftName;
@@ -198,12 +198,12 @@ function init() {
     // Init GUI by dat.gui
     console.log("init gui...")
     var guiCtrl = function(){
-        this.posX = 0;
+        this.posX = 70;
         this.posY = 0;
-        this.posZ = 0;
-        this.scaleX = 100;
-        this.scaleY = 100;
-        this.scaleZ = 100;
+        this.posZ = -600;
+        this.scaleX = 30;
+        this.scaleY = 30;
+        this.scaleZ = 30;
         this.rotateX = 0;
         this.rotateY = 0;
         this.rotateZ = 0;
@@ -221,9 +221,9 @@ function init() {
     gui = new dat.GUI();
     guiObj = new guiCtrl();
     var folder = gui.addFolder('Folder');
-    folder.add( guiObj, 'posX', -500, 500 ).onChange(setObjectPosition);
-    folder.add( guiObj, 'posY', -500, 500 ).onChange(setObjectPosition);
-    folder.add( guiObj, 'posZ', -500, 500 ).onChange(setObjectPosition);
+    folder.add( guiObj, 'posX', -1000, 1000 ).onChange(setObjectPosition);
+    folder.add( guiObj, 'posY', -1000, 1000 ).onChange(setObjectPosition);
+    folder.add( guiObj, 'posZ', -1000, 1000 ).onChange(setObjectPosition);
     folder.add( guiObj, 'scaleX', 0, 500 ).onChange(setObjectScale);
     folder.add( guiObj, 'scaleY', 0, 500 ).onChange(setObjectScale);
     folder.add( guiObj, 'scaleZ', 0, 500 ).onChange(setObjectScale);
